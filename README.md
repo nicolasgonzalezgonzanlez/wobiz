@@ -9,6 +9,8 @@ Maquetar y desarrollar la funcionalidad de la siguiente pantalla [wobiz](https:/
  Llamada con axios a endpoint para validar login
 ```
 
+![gif](https://github.com/nicolasgonzalezgonzanlez/wobiz/blob/master/news.gif?raw=true)
+
 ## Build Setup
 
 ```bash
