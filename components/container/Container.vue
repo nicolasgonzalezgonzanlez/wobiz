@@ -96,6 +96,7 @@ export default {
     onSubmit(event) {
       event.preventDefault()
       /* eslint-disable */
+      //captura data
       for (let i = 0; i < this.form.length; i++) {
         const d = document.getElementById(`input-${i}`).nodeValue
 
