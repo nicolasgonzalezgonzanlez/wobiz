@@ -1,5 +1,14 @@
 # login-system
 
+Maquetar y desarrollar la funcionalidad de la siguiente pantalla [wobiz](https://admin.wobiz.com.ar/signin).
+
+### Puntos importantes
+
+```
+ Maquetar segun mockup, incluido los enlases
+ Llamada con axios a endpoint para validar login
+```
+
 ## Build Setup
 
 ```bash
@@ -16,5 +25,3 @@ $ npm run start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
