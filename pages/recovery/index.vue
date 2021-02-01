@@ -21,6 +21,7 @@ export default {
           valueDefault: 'Ej: usuario@mailsadasd.com',
           id: '0-signin',
           input: 'input-0',
+          type: 'email',
         },
       ],
     }

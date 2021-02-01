@@ -21,12 +21,14 @@ export default {
           valueDefault: 'Ej: usuario@mailsadasd.com',
           id: '0-signin',
           input: 'input-0',
+          type: 'email',
         },
         {
           namber: 'Contraseña',
           valueDefault: 'Escribe su contraseña',
           id: '1-signin',
           input: 'input-1',
+          type: 'password',
         },
       ],
     }

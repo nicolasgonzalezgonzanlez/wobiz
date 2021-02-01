@@ -11,21 +11,23 @@
             {{ subtitle || '' }}
           </p>
         </div>
-        <div>
+        <div v-if="Object.keys(modelInput).length > 0">
           <b-form @submit="onSubmit">
             <b-form-group
-              v-for="f in form"
-              :key="f.id"
-              :label="f.namber"
+              v-for="{ namber, id, valueDefault, input, type } in form"
+              :key="id"
+              :label="namber"
               label-for="input-1"
             >
               <b-form-input
-                :id="f.input"
-                type="email"
-                :namber="f.namber"
-                :placeholder="f.valueDefault"
+                :id="input"
+                v-model="modelInput[namber]"
+                :type="type"
+                :namber="namber"
+                :placeholder="valueDefault"
                 required
               ></b-form-input>
+              <div v-html="errorInput[namber]"></div>
             </b-form-group>
           </b-form>
           <div v-if="origin === 'signin'">
@@ -90,22 +92,33 @@ export default {
   data: function () {
     return {
       show: false,
+      modelInput: {},
+      errorInput: {},
     }
+  },
+  /* eslint-disable */
+  created() {
+    this.form.map((value) => {
+      let namber = value.namber
+      this.modelInput[namber] = ''
+      this.errorInput[namber] = ''
+    })
   },
   methods: {
     onSubmit(event) {
       event.preventDefault()
-      /* eslint-disable */
       //captura data
-      for (let i = 0; i < this.form.length; i++) {
-        const d = document.getElementById(`input-${i}`).nodeValue
-
-        if (d.length < 6) console.log('tiene menos')
+      console.log(this.modelInput)
+      if (this.origin === 'signin') {
+        if (this.modelInput.Email.length < 6)
+          this.errorInput.Email = 'aca vendria el texto'
+        if (this.modelInput.Contraseña.length < 6)
+          this.errorInput.Contraseña = 'aca vendria el texto'
       }
-
-      /* eslint-enable */
+      console.log(this.errorInput)
     },
   },
+  /* eslint-enable */
 }
 </script>
 

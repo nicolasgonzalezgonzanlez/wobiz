@@ -21,18 +21,21 @@ export default {
           valueDefault: 'Ej: Mi tienda online',
           id: '0-signup',
           input: 'input-0',
+          type: 'text',
         },
         {
           namber: 'email',
           valueDefault: 'Ej: usuario@mailsadasd.com',
           id: '1-signup',
           input: 'input-1',
+          type: 'email',
         },
         {
           namber: 'Contraseña',
           valueDefault: 'Escribe su contraseña',
           id: '1-signup',
           input: 'input-2',
+          type: 'password',
         },
       ],
     }
